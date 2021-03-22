@@ -1,0 +1,17 @@
+int sumOfLastN_Nodes(struct Node* head, int n)
+{
+    if(n<0)
+    return 0;
+    stack<int> st;
+    int sum = 0;
+while(head!=NULL){
+    st.push(head->data);
+    head = head->next;
+    
+}
+while(n--){
+    sum+= st.top();
+    st.pop();
+}
+return sum;
+}
