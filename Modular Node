@@ -1,0 +1,16 @@
+int modularNode(Node* head, int k)
+{
+    if(k<=0||head==NULL)
+     return NULL;
+    int i =1;
+    Node* ModularNode = NULL;
+    for(Node* temp = head;temp!=NULL;temp=temp->next){
+        if(i%k==0)
+        ModularNode= temp;
+        i++;
+        
+    }
+    return ModularNode;
+    
+	
+}
