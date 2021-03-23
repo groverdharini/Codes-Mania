@@ -1,0 +1,27 @@
+ int countPairs(struct Node* head1, struct Node* head2, int x) {
+      int count = 0;
+     
+    unordered_set<int> us;
+     
+    // insert all the elements of 1st list
+    // in the hash table(unordered_set 'us')
+    while (head1 != NULL)
+    {
+        us.insert(head1->data);   
+         
+        // move to next node   
+        head1 = head1->next;
+    }
+     
+    // for each element of 2nd list
+    while (head2 != NULL)   
+    {
+        // find (x - head2->data) in 'us'
+        if (us.find(x - head2->data) != us.end())
+            count++;
+         
+        // move to next node
+        head2 = head2->next;   
+    }
+    // required count of pairs    
+    return count;
