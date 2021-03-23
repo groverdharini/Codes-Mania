@@ -1,0 +1,29 @@
+
+bool isPalindromeUtil(string str)
+{
+    int length = str.length();
+  
+    // Match characters from beginning and
+    // end.
+    for (int i=0; i<length/2; i++)
+        if (str[i] != str[length-i-1])
+            return false;
+  
+    return true;
+}
+  
+// Returns true if string formed by linked
+// list is palindrome
+bool isPalindrome(Node *node)
+{
+    // Append all nodes to form a string
+    string str = "";
+    while (node != NULL)
+    {
+        str.append(node->data);
+        node = node->next;
+    }
+  
+    // Check if the formed string is palindrome
+    return isPalindromeUtil(str);
+}
