@@ -1,0 +1,17 @@
+void deleteNode(Node *node)
+{
+  if(node==NULL)
+  return;
+  else{
+      if(node->next==NULL){
+      cout<<"cant be freed";
+      return;
+      
+  }
+  struct Node* temp =node->next;
+  node->data=node->next->data;
+  node->next=node->next->next;
+  free(temp);
+  
+}
+}
