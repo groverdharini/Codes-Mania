@@ -1,0 +1,34 @@
+class Solution {
+    int* getcountarray(string str2)
+{
+    int* count = (int*)calloc(sizeof(int), 256);
+ 
+    for (int i = 0; i < str2.size(); i++)
+    {
+        count[str2[i]]++;
+    }
+ 
+    return count;
+}
+  public:
+    string removeChars(string string1, string string2) {
+       int* count = getcountarray(string2);
+    string res;
+      
+   
+    int ip_idx = 0;
+ 
+    while (ip_idx < string1.size())
+    {
+        char temp = string1[ip_idx];
+        if (count[temp] == 0)
+        {
+            res.push_back(temp);
+        }
+        ip_idx++;
+    }
+ 
+    return res;
+}
+    
+};
