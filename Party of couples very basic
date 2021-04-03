@@ -1,0 +1,15 @@
+In a party of N people, each person is denoted by an integer. Couples are represented by the same number. Find out the only singe person in the party of couples.
+Basic gfg
+
+
+class Solution{
+    public:
+    int findSingle(int N, int arr[]){
+    int num = 0;
+        for(int i = 0 ; i<N;i++)
+        {
+            num = num ^ arr[i];
+        }
+        return num;
+    }
+};
