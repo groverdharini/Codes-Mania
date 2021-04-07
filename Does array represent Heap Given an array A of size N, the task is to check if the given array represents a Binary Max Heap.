@@ -1,0 +1,23 @@
+Given an array A of size N, the task is to check if the given array represents a Binary Max Heap.
+Basic GFG
+
+
+class Solution{
+    public:
+    bool isMaxHeap(int a[], int n)
+    { 
+        for (int i=0; i<=(n-2)/2; i++)
+    {
+        // If left child is greater, return false
+        if (a[2*i +1] > a[i])
+                return false;
+ 
+        // If right child is greater, return false
+        if (2*i+2 < n && a[2*i+2] > a[i])
+                return false;
+    }
+    return true;
+    
+         
+    }
+};
