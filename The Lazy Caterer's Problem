@@ -1,0 +1,9 @@
+Given an integer n, denoting the number of cuts that can be made on a pancake, find the maximum number of pieces that can be formed by making n cuts.
+
+gfg
+
+class Solution{
+	public:
+   	int maximum_Cuts(int n){
+   	    return (n*(n+1))/2+1;}
+};
