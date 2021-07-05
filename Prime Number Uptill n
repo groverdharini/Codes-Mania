@@ -1,0 +1,18 @@
+vector<int> Solution::sieve(int A) {
+    vector<int> result;
+  for(auto i = 0; i<=A; ++i)
+        result.emplace_back(i);
+    result[0] = 0;
+    result[1] = 0;
+    for(auto j = 2; j*j<=A; ++j) //same as condition j<=sqrt(A)
+    {
+        if(result[j]!=0)
+        {
+            for(auto k = j; j*k<=A; ++k)
+                result[j*k] = 0;
+        }
+    }
+    result.erase(remove(result.begin(), result.end(), 0), result.end()); //inefficient operation
+    return result;
+}
+
