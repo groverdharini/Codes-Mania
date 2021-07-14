@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+bool pal(int n){
+    int temp = n;
+    int rev =0;
+    while(temp>0)
+    {
+        int d = temp % 10;
+        rev = rev* 10 +d;
+        temp = temp/10;
+    }
+    return(temp==n);
+}
+int main()
+{ int n;
+cin>>n;
+cout<<pal(n);
+  
+}
