@@ -20,8 +20,7 @@ int isUgly(int no)
  
     return (no == 1) ? 1 : 0;
 }
- 
-// Function to get the nth ugly number
+
 int getNthUglyNo(int n)
 {
     
