@@ -11,9 +11,7 @@ bool isPalindromeUtil(string str)
   
     return true;
 }
-  
-// Returns true if string formed by linked
-// list is palindrome
+
 bool isPalindrome(Node *node)
 {
     // Append all nodes to form a string
@@ -23,7 +21,5 @@ bool isPalindrome(Node *node)
         str.append(node->data);
         node = node->next;
     }
-  
-    // Check if the formed string is palindrome
     return isPalindromeUtil(str);
 }
