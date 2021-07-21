@@ -3,8 +3,7 @@ dp
 #include <stdio.h>
 #include <stdlib.h>
  
-// This function divides a by greatest divisible
-//  power of b
+
 int maxDivide(int a, int b)
 {
     while (a % b == 0)
