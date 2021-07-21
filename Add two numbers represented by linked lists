@@ -6,18 +6,10 @@ Node* addTwoLists(Node* first, Node* second)
     Node *temp, *prev = NULL;
     int carry = 0, sum;
  
-    // while both lists exist
+
     while (first != NULL
            || second != NULL) {
-        // Calculate value of next
-        // digit in resultant list.
-        // The next digit is sum of
-        // following things
-        // (i) Carry
-        // (ii) Next digit of first
-        // list (if there is a next digit)
-        // (ii) Next digit of second
-        // list (if there is a next digit)
+       
         sum = carry + (first ? first->data : 0)
               + (second ? second->data : 0);
  
@@ -25,24 +17,18 @@ Node* addTwoLists(Node* first, Node* second)
  
         sum = sum % 10;
  
-        // Create a new node with sum as data
+       
         temp = newNode(sum);
  
-        // if this is the first node then
-        // set it as head of the resultant list
         if (res == NULL)
             res = temp;
- 
-        // If this is not the first
-        // node then connect it to the rest.
+ ]
         else
             prev->next = temp;
  
-        // Set prev for next insertion
+        
         prev = temp;
  
-        // Move first and second
-        // pointers to next nodes
         if (first)
             first = first->next;
         if (second)
@@ -52,7 +38,6 @@ Node* addTwoLists(Node* first, Node* second)
     if (carry > 0)
         temp->next = newNode(carry);
  
-    // return head of the resultant list
     return res;
 }
  
