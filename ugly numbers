@@ -26,11 +26,9 @@ int getNthUglyNo(int n)
     
     int i = 1;
      
-    // ugly number count
     int count = 1;
  
-    // Check for all integers untill ugly count
-    //  becomes n
+
     while (n > count) {
         i++;
         if (isUgly(i))
@@ -42,7 +40,7 @@ int getNthUglyNo(int n)
 // Driver Code
 int main()
 {
-    // Function call
+    
     unsigned no = getNthUglyNo(150);
     printf("150th ugly no. is %d ", no);
     getchar();
